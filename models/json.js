@@ -1,0 +1,3 @@
+const uName = ({
+    asdasd : "test"
+})
