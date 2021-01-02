@@ -4,6 +4,8 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 const authRoutes = require('./routes/auth')
+global.__basedir = `${__dirname}/`;
+
 
 app.use(bodyParser.json())
 

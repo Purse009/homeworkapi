@@ -8,7 +8,7 @@ const decryptJWT = require('../utils/decryptJWT')
 const user = require('../models/user')
 const { get } = require('mongoose')
 const validator = require('validator')
-const getJson = require('../models/json')
+
 
 exports.getUser = async (req, res, next) => {
     try {
@@ -17,6 +17,21 @@ exports.getUser = async (req, res, next) => {
     } catch (error) {
         console.log(error)
     }
+}
+
+exports.test = async (req , res , next ) => {
+    var fs = require('fs');
+    var filePath = `${__basedir}/public/img/profile`; 
+   
+    fs.readdir(filePath, (err, files) => {
+        files.forEach(file => {
+          if (file != null) {
+              console.log(filePath+'/'+file);
+      fs.unlinkSync(filePath+'/'+file);
+          }
+        });
+      });
+
 }
 
 exports.getOne = async (req, res, next) => {
