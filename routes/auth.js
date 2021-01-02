@@ -11,7 +11,7 @@ router.post('/signUp',[upload.single("file"),vertifly.isAdmin], authController.s
 router.post('/login', authController.login)
 router.put('/update/:id', authController.update)
 router.delete('/delete/:id', authController.delete)
-router.delete('/test',authController.test)
+router.delete('/deleteImg',authController.test)
 
 
 module.exports = router

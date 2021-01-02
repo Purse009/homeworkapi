@@ -19,7 +19,7 @@ exports.getUser = async (req, res, next) => {
     }
 }
 
-exports.test = async (req , res , next ) => {
+exports.deleteImg = async (req , res , next ) => {
     var fs = require('fs');
     var filePath = `${__basedir}/public/img/profile`; 
    
